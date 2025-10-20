@@ -1,7 +1,6 @@
 {
   "name": "The state of the app",
   "release_date": "2025-10-5",
-
   "content": {
     "the first part!": [
       {
@@ -25,19 +24,25 @@
     ],
     "the second part!": [
       {
-        "content": "",
+        "content": "Hello... for the second time",
         "type": "Title",
         "special": "Bold",
         "img": ""
       },
       {
-        "content": "This is the subtitle",
+        "content": "This is probably a subtitle",
         "type": "Subtitle",
-        "special": "Bold-Italic",
+        "special": "Bold-Italic", 
+        "img": ""
+      },
+        {
+        "content": "This has the summary styling from the update log.",
+        "type": "Summary",
+        "special": "",
         "img": ""
       },
       {
-        "content": "And here's part 2 of the blog! Under this text is a funny image that should be centered under the contents.",
+        "content": "And here's part 2 of the blog! Under this next text is a funny image that should be centered under the text.",
         "type": "Content",
         "special": "Italic",
         "img": ""
@@ -46,14 +51,6 @@
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius felis nisi. Ut quis erat pretium orci tempor egestas. Fusce a vehicula odio, pretium pellentesque nulla. Nulla commodo tortor purus, sodales dictum lacus fermentum quis. Nullam ultrices quis risus eu tincidunt. Donec sed ex neque. Suspendisse aliquet ac dui varius feugiat. Mauris condimentum lacinia elit at iaculis. Donec pulvinar sodales ligula sit amet rhoncus. Nullam interdum augue et aliquam ultricies. Mauris sollicitudin lacus at metus semper, porta pellentesque sem efficitur. Curabitur congue metus erat, nec sodales augue molestie sed. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur in libero molestie, suscipit magna sed, gravida odio. Nulla congue mi ac mauris consectetur varius. Quisque vitae rutrum urna, ut facilisis tortor. Nam et diam vitae sem vulputate scelerisque vitae eu lectus. Cras congue pharetra pretium. Donec auctor dapibus dignissim. Sed sit amet neque porttitor, porta mi a, faucibus felis. Suspendisse tincidunt egestas dignissim. Nulla in nulla ac ligula viverra pretium et vitae elit. Mauris id elit tellus.",
         "type": "Content",
         "special": "",
-        "img": "https://i.imgur.com/loOqJAG.jpeg"
-      }
-    ],
-    "this part only has an image. No text is visible.": [
-      {
-        "content": "",
-        "type": "Content",
-        "special": "Bold",
         "img": "https://i.imgur.com/loOqJAG.jpeg"
       }
     ]
