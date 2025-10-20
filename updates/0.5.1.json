@@ -32,6 +32,16 @@
         "title": "UI Polish",
         "description": "Refined typography, spacing, and animations for smoother transitions."
       }
+    ],
+        "improvements2": [
+      {
+        "title": "Performance Boost",
+        "description": "Optimized database queries and reduced UI load times."
+      },
+      {
+        "title": "UI Polish",
+        "description": "Refined typography, spacing, and animations for smoother transitions."
+      }
     ]
   }
 }
