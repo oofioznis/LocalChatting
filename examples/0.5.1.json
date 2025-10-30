@@ -1,0 +1,47 @@
+{
+  "name": "the test update",
+  "version": "0.5.1",
+  "release_date": "2025-10-20",
+  "status": "stable",
+
+  "summary": "Introduced major UI enhancements, new API endpoints, and performance optimizations.",
+
+  "highlights": [
+    "Redesigned dashboard with customizable widgets",
+    "Improved startup time by 40%",
+    "Added real-time notifications system"
+  ],
+
+  "sections": {
+    "new_features": [
+      {
+        "title": "Customizable Dashboard",
+        "description": "Users can now add, remove, and rearrange widgets on the main dashboard."
+      },
+      {
+        "title": "New Analytics API",
+        "description": "Introduced REST API for accessing real-time analytics data."
+      }
+    ],
+    "improvements": [
+      {
+        "title": "Performance Boost",
+        "description": "Optimized database queries and reduced UI load times."
+      },
+      {
+        "title": "UI Polish",
+        "description": "Refined typography, spacing, and animations for smoother transitions."
+      }
+    ],
+        "improvements2": [
+      {
+        "title": "Performance Boost",
+        "description": "Optimized database queries and reduced UI load times."
+      },
+      {
+        "title": "UI Polish",
+        "description": "Refined typography, spacing, and animations for smoother transitions."
+      }
+    ]
+  }
+}

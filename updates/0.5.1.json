@@ -1,46 +1,40 @@
 {
-  "name": "the test update",
-  "version": "0.5.1",
-  "release_date": "2025-10-20",
+  "name": "The Executable Update",
+  "version": "0.6",
+  "release_date": "2025-10-30",
   "status": "stable",
 
-  "summary": "Introduced major UI enhancements, new API endpoints, and performance optimizations.",
+  "summary": "First version compiled to C++, with some small features",
 
   "highlights": [
-    "Redesigned dashboard with customizable widgets",
-    "Improved startup time by 40%",
-    "Added real-time notifications system"
+    "Continue Message button",
+    "Chat history prompt assembling improved",
+    "Blogs"
   ],
 
   "sections": {
     "new_features": [
       {
-        "title": "Customizable Dashboard",
-        "description": "Users can now add, remove, and rearrange widgets on the main dashboard."
+        "title": "Continue Message button",
+        "description": "Users can now press the continue message button on the latest AI message, input instructions optionally that guide the AI on how to continue the message, and the LLM will continue where it left off."
       },
       {
-        "title": "New Analytics API",
-        "description": "Introduced REST API for accessing real-time analytics data."
+        "title": "Update/Blogs",
+        "description": "Introduced Update/Blogs buttons in the main menu, which retrieve the latest update log/blogs posted about LocalChatting."
       }
     ],
     "improvements": [
       {
-        "title": "Performance Boost",
-        "description": "Optimized database queries and reduced UI load times."
+        "title": "Chat history assembly",
+        "description": "The chat history prompt has been fully reworked, it was using legacy code in prior versions and was behaving incorrectly, sometimes leaving out messages/mixing up message order. LLM responses should be way clearer with referencing history."
       },
       {
-        "title": "UI Polish",
-        "description": "Refined typography, spacing, and animations for smoother transitions."
-      }
-    ],
-        "improvements2": [
-      {
-        "title": "Performance Boost",
-        "description": "Optimized database queries and reduced UI load times."
+        "title": "Debug Menu Piechart",
+        "description": "A basic piechart detailing how available tokens are distributed, useful for testing."
       },
-      {
-        "title": "UI Polish",
-        "description": "Refined typography, spacing, and animations for smoother transitions."
+            {
+        "title": "Multiple Fixes/Stability Changes",
+        "description": "The process of moving the app's data accessing from the local app's directory which no longer exists to the user's documents folder has been challenging, but it's also given a lot of opportunity to refine on older parts of the codebase, alot of functions have had oversights fixed and should error less often."
       }
     ]
   }
