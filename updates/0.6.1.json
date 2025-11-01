@@ -1,0 +1,20 @@
+{
+  "version": "0.6.1",
+  "release_date": "2025-11-1",
+  "status": "stable",
+
+  "summary": "Release Patch",
+
+  "highlights": [
+    "Fixed fatal error related to websocket content delivery"
+  ],
+
+  "sections": {
+    "Bug Fixes": [
+      {
+        "title": "Websocket Error",
+        "description": "Characters that had names comprising of symbols like quadruple underscores (____) or plus symbols (+), and other symbols were subject to a websocket crash, due to how Eel websockets handle communication. Websockets are no longer used to serve large sized data portions, such as images."
+      }
+    ]
+  }
+ }
