@@ -1,0 +1,48 @@
+{
+  "name": "The Formatting Update",
+  "version": "0.6.2",
+  "release_date": "2025-11-10",
+  "status": "stable",
+
+  "summary": "Small features and bugfixes",
+
+  "highlights": [
+    "Added multiple features related to formatting.",
+    "Fixed lots of persistent bugs from previous versions."
+  ],
+
+  "sections": {
+    "new_features": [
+      {
+        "title": "Auto format button",
+        "description": "Added a new button next to character names in chats. On click, automatically formats emphasis blocks (Asterisks wrappings in dialogue/narration blocks) in the message to use correct formatting."
+      },
+      {
+        "title": "Smart format hotkey",
+        "description": "Added a keybind category to settings. Upon pressing the key (Default: Ctrl), will convert certain characters into other ones. Like -- into emdash."
+      },  
+      {
+        "title": "Handbook",
+        "description": "Added a formatting handbook on the main menu, shows all types of formatting in the app."
+      }          
+    ],
+    "Bug Fixes": [
+      {
+        "title": "Fixed URL based character importing",
+        "description": "Updated URL based importing methods"
+      },
+      {
+        "title": "Fixed ratings/reroll buttons disappear after deleting a message.",
+        "description": "Ratings/rerolls would be hidden and then due to timing inconsistencies, never get unhidden. This should be fixed."
+      },
+      {
+        "title": "Fixed scrollbar jumping up issue slightly, still occurs, but way less.",
+        "description": "Scrollbar jumping has been another persistent issue, though should be way rarer now. Only happens when fully scrolled down while a message is being generated."
+      },
+      {
+        "title": "Fixed rating status carrying over to next reroll",
+        "description": "Small visual bug where the previous reroll's ratings were shown on the next reroll until the reroll buttons were updated (Hovered over/interacted with)."
+      }
+    ]    
+  }
+}
