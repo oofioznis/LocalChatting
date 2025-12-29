@@ -1,0 +1,45 @@
+{
+  "name": "The Rewrite",
+  "version": "0.7",
+  "release_date": "2025-12-29",
+  "status": "stable",
+
+  "summary": "Backend was completely rewritten, plus some new features",
+
+  "highlights": [
+    "Rewritten Backend",
+    "Theme customization added",
+    "Support for multiple greetings for characters"
+  ],
+
+  "sections": {
+    "new_features": [
+      {
+        "title": "Theme customization",
+        "description": "Custom themes have been implemented, a full new area for customizing themes, aswell as AI theme generation for those who wanna try out the feature effortlessly."
+      },
+      {
+        "title": "Alternate gretings",
+        "description": "Characters can have multiple greetings now! Importing a character that has alternate greetings in their character card will no longer ignore the field. You can also add multiple greetings to characters, the editing for 'first message' was completely redone."
+      }
+    ],
+    "improvements": [
+      {
+        "title": "Rewritten Backend",
+        "description": "The main reason the update took so long: The python file, with over 10,000 lines was rewritten down to around 7,200 lines (With lots more comments factored in.), mainly done for maintainability, the codebase went from function oriented to object oriented, and that helps a lot with adding new features and maintainability."
+      },
+      {
+        "title": "Additional debug mode functionality",
+        "description": "In debug mode, the fully extracted character info is dumped as a .json, aswell as the .png used (If imported via URL) in the character folder."
+      },
+      {
+        "title": "Sidebar searching (Characters/Personas/Chats)",
+        "description": "The original sidebar searching used a flawed algorithm and was actually completely broken, was fixed during the rewrite."
+      },
+      {
+        "title": "Consistency fixes",
+        "description": "Multiple hardcoded mentions of coloring and other small issues have been fixed, should be way less instances of the first theme's colors leaking into other themes."
+      }
+    ]
+  }
+}

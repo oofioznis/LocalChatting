@@ -7,7 +7,7 @@
   "summary": "First version compiled to C++, with some small features",
 
   "highlights": [
-    "Continue Message button",
+    "Continue message button",
     "Chat history prompt assembling improved",
     "Blogs/Update Logs"
   ],
@@ -15,7 +15,7 @@
   "sections": {
     "new_features": [
       {
-        "title": "Continue Message button",
+        "title": "Continue message button",
         "description": "Users can now press the continue message button on the latest AI message, input instructions optionally that guide the AI on how to continue the message, and the LLM will continue where it left off."
       },
       {
@@ -25,15 +25,15 @@
     ],
     "improvements": [
       {
-        "title": "Chat history assembly",
+        "title": "Chat history Assembly",
         "description": "The chat history prompt has been fully reworked, it was using legacy code in prior versions and was behaving incorrectly, sometimes leaving out messages/mixing up message order. LLM responses should be way clearer with referencing history."
       },
       {
-        "title": "Debug Menu Piechart",
+        "title": "Debug menu piechart",
         "description": "A basic piechart detailing how available tokens are distributed, useful for testing."
       },
             {
-        "title": "Multiple Fixes/Stability Changes",
+        "title": "Multiple fixes/Stability changes",
         "description": "The process of moving the app's data accessing from the local app's directory which no longer exists to the user's documents folder has been challenging, but it's also given a lot of opportunity to refine on older parts of the codebase, alot of functions have had oversights fixed and should error less often."
       }
     ]
