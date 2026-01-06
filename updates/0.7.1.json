@@ -1,0 +1,45 @@
+{
+  "name": "Character Creation (Part 1)",
+  "version": "0.7.1",
+  "release_date": "2026-1-6",
+  "status": "stable",
+
+  "summary": "Character creation interface, support for larger lorebooks, and the usual small improvements",
+
+  "highlights": [
+    "Old 'character attribute editing' was replaced with a dedicated character editing menu.",
+    "Websocket errors were fixed by replacing websockets when large file data transfers are called.",
+    "Image URLs will display in chat"
+  ],
+
+  "sections": {
+    "new_features": [
+      {
+        "title": "Character creation menu",
+        "description": "The '+ New' button was changed to be a character creation interface, previous import functionality was moved to a smaller import button. The edit buttons from the character UI have been removed, as they are obsolete now. No more finnicky editing."
+      },
+      {
+        "title": "Images in chat history",
+        "description": "Image URLs (URL's ending .png, .jpg, .gif, etc.) now turn into actual images, allowing you to embed an image in your first message. Obviously the LLM doesn't know what the image is, so it's for user experience only"
+      }
+    ],
+    "improvements": [
+      {
+        "title": "Data transfers",
+        "description": "Eel, the framework of this application uses websockets to communicate between frontend/backend. This works fine for small information (short texts), but has issues and errors with large text chunks (500k+ token lorebooks, or large chat histories). Images were already fixed to not use websockets back in v0.6.1, and now most data transfers refrain from websockets."
+      },
+      {
+        "title": "Consistency changes.",
+        "description": "There were a lot of buttons that were different only slightly from other buttons, and tons of other small inconsistencies that were fixed."
+      },
+      {
+        "title": "Chat names",
+        "description": "Above the chat history, on the top bar, the first character's name was always shown. Now it's the first character's name, OR the chat's name if there's more characters than one."
+      },
+      {
+        "title": "Refactored background images code",
+        "description": "Sliders sometimes reset, and the code overall was messy and obsolete, was rewritten to use more simple and robust methods."
+      }
+    ]
+  }
+}
