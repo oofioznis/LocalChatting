@@ -1,0 +1,100 @@
+{
+  "name": "The State of LocalChatting!",
+  "release_date": "2026-1-13",
+  "content": {
+    "Recap of 2025": [
+      {
+        "content": "This project started out as a small 200 line app that had basic API functionality in the summer of 2025, and it's quickly exploded in size, functionality, complexness—everything.",
+        "type": "Text",
+        "special": "",
+        "img": ""
+      },
+      {
+        "content": "Summer 2025",
+        "type": "Title",
+        "special": "Bold",
+        "img": ""
+      },
+            {
+        "content": "Here's where things started.",
+        "type": "Subtitle",
+        "special": "Italic",
+        "img": ""
+      },
+      {
+        "content": "<p> The initial prototype build was created on July 28, 2025, a quick test to see if I can setup api access, as I was fed up with how other AI chatting sites worked, more of a quick test to see how complex it was to setup. It surprisingly... worked! Yeah, the first prototype has basic, super super simple functionality, which I threw together in a day. This was the start to what would become LocalChatting. <br> <p> The next month was spent building the framework. I decided to make it a webapp instead of a python gui app, I decided to use eel as my backend (which I would regret dearly...), and I made some concept prototype art (which is now lost unfortunately) for the layout of the app. And less than a month later— <br> <p> The first real version (v0.1) was released at the end of summer, on August 20, with basic frontend API access, buggy chatting, and very, very little features. But the core design and framework for the app was done, and the direction was established. The code writing was hasty, 'whatever works' mindset, and it was about rushing out a functional build while I still had freetime.",
+        "type": "Text",
+        "special": "",
+        "img": ""
+      },
+      {
+        "content": "(v0.1, main menu is almost identical to current builds.)",
+        "type": "Title",
+        "special": "",
+        "img": "https://files.catbox.moe/li123r.png"
+      },
+      {
+        "content": "Fall 2025",
+        "type": "Title",
+        "special": "Bold",
+        "img": ""
+      },
+      {
+        "content": "Billions of features",
+        "type": "Subtitle",
+        "special": "Italic",
+        "img": ""
+      },
+      {
+        "content": "<p> Fall is when development really started to ramp up, the app still had bugs and issues, places to improve, but it was mostly stable. It was usable and worked alright, there were large rewrites that happened, late fall is when I regretted choosing Eel as my backend-frontend communication method, and working around it was difficult, not to mention really weird bugs that were hard to diagnose and fix. <br> <p> Nonetheless, app infrastructure issues and limited free time didn't stop Localchatting's development, v0.6 (October 30th, 2025) marked the first compiled version of the app, and the tons of updates during fall included features like:",
+        "type": "Text",
+        "special": "",
+        "img": ""
+      },
+      {
+        "content": "Message rerolls <br> Lorebooks <br> Update logs/Blogs <br> Temporary characters <br> More themes <br> Multiple characters in one chat <br> Choosing what character to send messages as <br> Importing characters via URL, <br> And more!",
+        "type": "Summary",
+        "special": "Bold-Italic",
+        "img": "https://files.catbox.moe/nnzr3b.png"
+      },
+      {
+        "content": "<p> Lots of progress, though development slowed down during mid-November, and that was because— ",
+        "type": "Text",
+        "special": "",
+        "img": ""
+      },
+      {
+        "content": "Winter 2025",
+        "type": "Title",
+        "special": "Bold",
+        "img": ""
+      },
+      {
+        "content": "—The rewrite! <br> ... <br> <p> Yes, two days before 2026, I finished the rewrite. <br> <p> All of LocalChatting's backend was rewritten, even the simple stuff like file reading. The previous code was messy, was function oriented (tons of redundancy) and was 10.8k lines long, not to mention constant bugs during updates and silent errors. <br> <p> Although the user experience was effectively unchanged, the backend was cut down to 7.2k lines, while also keeping functionality a 33%~ decrease. <br> <p> This was mainly a positive for development, as it set a standard for professional and efficient code, and it set the path for me to quickly release the character creation update.",
+        "type": "Text",
+        "special": "",
+        "img": ""
+      }
+    ],
+    "What's next?": [
+      {
+        "content": "The future???",
+        "type": "Title",
+        "special": "Bold",
+        "img": ""
+      },
+      {
+        "content": "This is actual news",
+        "type": "Subtitle",
+        "special": "Italic", 
+        "img": ""
+      },
+      {
+        "content": "<p> Now in 2026, what's next? Well, the most recent update was the character creation update—the first part of it anyway. That was a long planned feature that was delayed for the sake of stability and more essential functionality. <br> <p> However, the current 'planned' features are related to lorebooks and quality of life features, aswell as autoupdating being added, then character creation part 2. January and February (Winter 2026) will be similar to Fall of 2025. New features mainly. March has something unique planned that's been experimented with a couple times privately... <br> <p> For now though, LC 1.0 is planned to be released around the summer of 2026. Is LC 1.0 the end of development? No. Although features might be rarer and less essential, there will still be QOL, stability updates and support for new AI APIs, possibly even large updates.",
+        "type": "Text",
+        "special": "",
+        "img": ""
+      }
+    ]
+  }
+}
