@@ -1,0 +1,41 @@
+{
+  "name": "Auto Updating",
+  "version": "0.8",
+  "release_date": "2026-1-13",
+  "status": "stable",
+
+  "summary": "Updates can be installed in the app, and lorebook management and creation was improved.",
+
+  "highlights": [
+    "Updater included in the app.",
+    "Lorebook creator, editing improved.",
+    "Sidebar groups"
+  ],
+
+  "sections": {
+    "new_features": [
+      {
+        "title": "Updater",
+        "description": "LocalChatting now comes bundled with an updater, allowing automatic updates, downloading updates from the app. Still in testing, expect some issues."
+      },
+      {
+        "title": "Lorebook Tab",
+        "description": "Lorebooks were given a sidebar tab, allowing global lorebooks, which you can select to apply to chats without importing them constantly. Old lorebooks are turned into temporary lorebooks now."
+      },
+      {
+        "title": "Lorebook Editor",
+        "description": "Accompanying the lorebook tab, is the new lorebook editor, similar to the character editor. Lorebook creation is way less finnicky now."
+      },
+      {
+        "title": "Update log/Blog notifications and caching",
+        "description": "When a new blog or update log is released, there's an icon shown. Update logs and blogs are also cached, making them load faster and be visible offline."
+      }
+    ],
+    "improvements": [
+      {
+        "title": "Themes",
+        "description": "Theme selection was broken last update, and custom themes applied immediately without saving settings. Both issues are fixed."
+      }
+    ]
+  }
+}
