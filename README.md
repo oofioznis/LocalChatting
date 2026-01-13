@@ -5,7 +5,7 @@ To install LocalChatting (Windows Only), create a .bat file in the folder you wa
 setlocal enabledelayedexpansion
 
 echo ========================================
-echo   LocalChatting Installer (Robust)
+echo   LocalChatting Installer
 echo ========================================
 echo.
 
@@ -15,95 +15,65 @@ set "INSTALL_DIR=LocalChatting"
 
 echo [1/4] Checking for latest versions...
 
-REM Get latest app version
-for /f "delims=" %%i in ('curl -s -f %GITHUB_BASE%/latestversion.txt') do set "APP_VER=%%i"
-if "!APP_VER!"=="" (
-    echo ERROR: Could not retrieve latest app version from GitHub.
-    pause & exit /b 1
+REM Get and trim latest app version
+for /f "delims=" %%i in ('curl -s -f %GITHUB_BASE%/latestversion.txt') do (
+    set "APP_VER=%%i"
+    set "APP_VER=!APP_VER: =!"
+)
+REM Get and trim latest updater version
+for /f "delims=" %%i in ('curl -s -f %GITHUB_BASE%/latestupdaterversion.txt') do (
+    set "UPDATER_VER=%%i"
+    set "UPDATER_VER=!UPDATER_VER: =!"
 )
 
-REM Get latest updater version
-for /f "delims=" %%i in ('curl -s -f %GITHUB_BASE%/latestupdaterversion.txt') do set "UPDATER_VER=%%i"
-if "!UPDATER_VER!"=="" (
-    echo ERROR: Could not retrieve latest updater version from GitHub.
-    pause & exit /b 1
-)
+if "!APP_VER!"=="" ( echo ERROR: Could not retrieve App Version. & pause & exit /b 1 )
+if "!UPDATER_VER!"=="" ( echo ERROR: Could not retrieve Updater Version. & pause & exit /b 1 )
 
-echo Latest App Version: !APP_VER!
-echo Latest Updater Version: !UPDATER_VER!
+echo Latest App Version: "!APP_VER!"
+echo Latest Updater Version: "!UPDATER_VER!"
 echo.
 
-echo [2/4] Creating installation directory...
 if not exist "%INSTALL_DIR%" mkdir "%INSTALL_DIR%"
 
 set "UPDATER_EXTRACTED=false"
 set "APP_EXTRACTED=false"
 
-echo [3/4] Downloading Updater Build (!UPDATER_VER!)...
-REM Try ZIP first
-set "UPDATER_FILE=!UPDATER_VER!.zip"
-set "UPDATER_PATH=%INSTALL_DIR%\!UPDATER_FILE!"
+echo [2/4] Downloading and Extracting Updater...
+set "U_ZIP_URL=%GITHUB_BASE%/builds/updater/!UPDATER_VER!.zip"
+set "U_ZIP_PATH=%CD%\%INSTALL_DIR%\!UPDATER_VER!.zip"
 
-curl -L -f -# -o "!UPDATER_PATH!" "%GITHUB_BASE%/builds/updater/!UPDATER_FILE!"
+REM Use PowerShell for both download and extraction to be safe
+powershell -command "& { try { Invoke-WebRequest -Uri '%U_ZIP_URL%' -OutFile '%U_ZIP_PATH%' -ErrorAction Stop; Expand-Archive -Path '%U_ZIP_PATH%' -DestinationPath '%INSTALL_DIR%' -Force; Remove-Item '%U_ZIP_PATH%'; exit 0 } catch { exit 1 } }"
 
 if !ERRORLEVEL! equ 0 (
-    REM Validate file size (if < 1KB, it's likely a broken download)
-    for %%A in ("!UPDATER_PATH!") do if %%~zA LSS 1024 (
-        echo WARNING: ZIP download seems corrupted (too small). Falling back...
-        del "!UPDATER_PATH!"
-        goto UPDATER_RAR
-    )
-    echo Extracting Updater...
-    powershell -command "Expand-Archive -Path '!UPDATER_PATH!' -DestinationPath '%INSTALL_DIR%' -Force"
-    if !ERRORLEVEL! equ 0 (
-        del "!UPDATER_PATH!"
-        set "UPDATER_EXTRACTED=true"
-    ) else (
-        echo WARNING: Auto-extraction failed. Please extract manually.
-    )
+    echo Updater extracted successfully.
+    set "UPDATER_EXTRACTED=true"
 ) else (
-    :UPDATER_RAR
+    echo ZIP not found or extraction failed, trying .rar...
     set "UPDATER_FILE=!UPDATER_VER!.rar"
-    set "UPDATER_PATH=%INSTALL_DIR%\!UPDATER_FILE!"
-    echo ZIP not found or failed, trying .rar...
-    curl -L -f -# -o "!UPDATER_PATH!" "%GITHUB_BASE%/builds/updater/!UPDATER_FILE!"
+    curl -L -f -# -o "%INSTALL_DIR%\!UPDATER_FILE!" "%GITHUB_BASE%/builds/updater/!UPDATER_FILE!"
     if !ERRORLEVEL! neq 0 (
-        echo ERROR: Failed to download updater build (.zip or .rar).
+        echo ERROR: Failed to download updater build.
         pause & exit /b 1
     )
 )
 
 echo.
-echo [4/4] Downloading App Build (!APP_VER!)...
-REM Try ZIP first
-set "APP_FILE=!APP_VER!.zip"
-set "APP_PATH=%INSTALL_DIR%\!APP_FILE!"
+echo [3/4] Downloading and Extracting App...
+set "A_ZIP_URL=%GITHUB_BASE%/builds/app/!APP_VER!.zip"
+set "A_ZIP_PATH=%CD%\%INSTALL_DIR%\!APP_VER!.zip"
 
-curl -L -f -# -o "!APP_PATH!" "%GITHUB_BASE%/builds/app/!APP_FILE!"
+powershell -command "& { try { Invoke-WebRequest -Uri '%A_ZIP_URL%' -OutFile '%A_ZIP_PATH%' -ErrorAction Stop; Expand-Archive -Path '%A_ZIP_PATH%' -DestinationPath '%INSTALL_DIR%' -Force; Remove-Item '%A_ZIP_PATH%'; exit 0 } catch { exit 1 } }"
 
 if !ERRORLEVEL! equ 0 (
-    REM Validate file size
-    for %%A in ("!APP_PATH!") do if %%~zA LSS 1024 (
-        echo WARNING: ZIP download seems corrupted. Falling back...
-        del "!APP_PATH!"
-        goto APP_RAR
-    )
-    echo Extracting App...
-    powershell -command "Expand-Archive -Path '!APP_PATH!' -DestinationPath '%INSTALL_DIR%' -Force"
-    if !ERRORLEVEL! equ 0 (
-        del "!APP_PATH!"
-        set "APP_EXTRACTED=true"
-    ) else (
-        echo WARNING: Auto-extraction failed. Please extract manually.
-    )
+    echo App extracted successfully.
+    set "APP_EXTRACTED=true"
 ) else (
-    :APP_RAR
+    echo ZIP not found or extraction failed, trying .rar...
     set "APP_FILE=!APP_VER!.rar"
-    set "APP_PATH=%INSTALL_DIR%\!APP_FILE!"
-    echo ZIP not found or failed, trying .rar...
-    curl -L -f -# -o "!APP_PATH!" "%GITHUB_BASE%/builds/app/!APP_FILE!"
+    curl -L -f -# -o "%INSTALL_DIR%\!APP_FILE!" "%GITHUB_BASE%/builds/app/!APP_FILE!"
     if !ERRORLEVEL! neq 0 (
-        echo ERROR: Failed to download app build (.zip or .rar).
+        echo ERROR: Failed to download app build.
         pause & exit /b 1
     )
 )
@@ -114,22 +84,19 @@ echo   Installation Complete!
 echo ========================================
 echo Files are located in: %CD%\%INSTALL_DIR%
 
-REM Determine if extraction message is needed
 if "!UPDATER_EXTRACTED!"=="false" (
     if "!APP_EXTRACTED!"=="false" (
         echo.
-        echo NOTE: Please extract both !UPDATER_FILE! and !APP_FILE! 
+        echo NOTE: Please extract both versions (!UPDATER_VER!.rar and !APP_VER!.rar) 
         echo into the folder before running the application.
     ) else (
         echo.
-        echo NOTE: Please extract !UPDATER_FILE! into the folder 
-        echo before running the application.
+        echo NOTE: Please extract !UPDATER_VER!.rar into the folder.
     )
 ) else (
     if "!APP_EXTRACTED!"=="false" (
         echo.
-        echo NOTE: Please extract !APP_FILE! into the folder 
-        echo before running the application.
+        echo NOTE: Please extract !APP_VER!.rar into the folder.
     )
 )
 
