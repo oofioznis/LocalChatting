@@ -1,0 +1,29 @@
+{
+  "version": "0.8.1",
+  "release_date": "2026-1-20",
+  "status": "stable",
+
+  "summary": "Just fixes",
+
+  "highlights": [
+    "Customization tab issues fixed",
+    "Greetings button on character details tab fixed"
+  ],
+
+  "sections": {
+    "improvements": [
+      {
+        "title": "Customization Tab",
+        "description": "The entire customization modal was broken when entering a chat, only way to fix it was to restart."
+      },
+      {
+        "title": "Greetings Button",
+        "description": "When the character's name had spaces, it would never find the greetings information due to using the visual name instead of the folder name for directory search"
+      },
+      {
+        "title": "Websockets (again)",
+        "description": "Even more parts of the app now use a local server instead of websockets, the main advantage is the increased file size (1-10mb websockets vs 100mb servers), character loading also first only gets the metadata, to further reduce chances of large file payloads crashing the app."
+      }
+    ]
+  }
+}
