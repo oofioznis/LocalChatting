@@ -1,0 +1,50 @@
+{
+  "name": "2026 Q1 Progress Report",
+  "release_date": "2026-2-18",
+  "content": {
+    "Progress Report": [
+      {
+        "content": "<p> It's been some time since the new years, and similarly, it's been some time since a major update—don't worry, development isn't cancelled, it's just been a bit slower due to side projects, but there's multiple major features in development and planned to be released before the second quarter of 2026. So what are they?.",
+        "type": "Text",
+        "special": "",
+        "img": ""
+      },
+      {
+        "content": "<p> 1. LLM Thinking Support. <br> <p> - Although unpopular, thinking LLMs are pretty useful for larger chats, ones with 20k+ tokens, etc. These are the times thinking modes excel the most, able to think about multiple approaches to continue the story.",
+        "type": "Summary",
+        "special": "Bold-Italic",
+        "img": ""
+      },
+      {
+        "content": "<p> 2. Deleting improvements <br> <p> - Message deletion was added in one of the first versions and almost, there are tons of QOL stuff like deleting multiple at a time/quick deleting, which will be added. <br>",
+        "type": "Summary",
+        "special": "Bold-Italic",
+        "img": ""
+      },
+      {
+        "content": "<p> 3. Story prompt <br> <p> - To lean more into the story aspect, a new story prompt will be added. Here you'll be able to outline an overall story, which the AI will follow. With this you'll be able to guide the AI towards a plot point without constantly mentioning it. <br>",
+        "type": "Summary",
+        "special": "Bold-Italic",
+        "img": ""
+      },
+      {
+        "content": "<p> 4. The usual consistency improvements <br> <p> - These take a while to refine and adjust, but these are coming too. Multiple inconsistencies like the generate button occasionally hiding or reroll/rating stars rarely disappearing—these have been pretty annoying, long standing issues that take a while to figure out. <br>",
+        "type": "Summary",
+        "special": "Bold-Italic",
+        "img": ""
+      },
+      {
+        "content": "<p> 5. Generation setting improvements <br> <p> - Generation settings are also super basic. Sliders for choosing max tokens for stuff like personality/summary prompts will be added, though as an advanced feature, due to it being somewhat easy to misuse and decrease the quality of responses.",
+        "type": "Summary",
+        "special": "Bold-Italic",
+        "img": ""
+      },
+      {
+        "content": "<p> These are the main features to expect in the next update, which is planned sometime in the last days of February or first half of March. <br> <p> I'd say, about 85% of the update implementation is planned, and about 35% actually done, after this releases, there's gonna be a way more ambitious update in March, but until then, stay tuned.",
+        "type": "Text",
+        "special": "",
+        "img": ""
+      }
+    ]
+  }
+}
