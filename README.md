@@ -1,1 +1,1 @@
-To install LocalChatting, download the latest release. Make sure to keep updater.exe in the same folder as LocalChatting.exe. 
+To install LocalChatting, download the latest release, run Launcher.exe. For updates, either manually re-install the app via downloading a new release (All your data is preserved) or use the bundled updater in the updater folder.
