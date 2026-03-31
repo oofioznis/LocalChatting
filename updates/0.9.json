@@ -1,0 +1,65 @@
+{
+  "name": "Pre-Release LocalChatting",
+  "version": "0.9",
+  "release_date": "2026-3-31",
+  "status": "stable",
+
+  "summary": "Mainly consistency updates/bug fixes, aswell as minor new features.",
+
+  "highlights": [
+    "Story editor for each chat",
+    "Ratings system reworked",
+    "Tons of fixes and QOL"
+  ],
+
+  "sections": {
+    "new_features": [
+      {
+        "title": "Story Editor",
+        "description": "Each chat now has a story editor, where users can put notes/an overarching story/other important information for the LLM, good for reminders about key facts too."
+      },
+      {
+        "title": "Ratings Reworked",
+        "description": "The old ratings system was added back in v0.2, it was pretty broken and didn't work all that well, tons of fixes + improvements related to ratings actually working for messages."
+      },
+      {
+        "title": "API Profiles",
+        "description": "Now you no longer have to keep everything in a notepad, you can have multiple profiles of API presets, you can quickly hotswap between providers."
+      },
+      {
+        "title": "Added Tips",
+        "description": "When first opening LC, you'll be prompted to enable/disable tips. Tips give some insight on what features do and how to use them, very useful for people inexperienced with LLM terminology."
+      }
+    ],
+    "improvements": [
+      {
+        "title": "Streaming Animation",
+        "description": "Small animation while waiting for a response, so you have something to stare at while thinking about your life choices."
+      },
+      {
+        "title": "Expanded delete button",
+        "description": "You can now delete all messages below the message you're deleting aswell, and the delete menu just looks better overall."
+      },
+      {
+        "title": "Better Deletion Menu",
+        "description": "Now, when deleting a character, persona, lorebook or chat, the deletion menu shows what you're trying to delete."
+      },
+      {
+        "title": "Chat/Character Menu Capitalization",
+        "description": "The chat/character menu no-longer force-capitalizes the name of the chat/character. It was a bit disorienting to try and rename chats due to it."
+      },
+      {
+        "title": "Rewrote chat state management",
+        "description": "Issues like ratings disappearing and other miscellaneous chat-state issues are now fixed, completely redid the conditions and code for it."
+      },
+      {
+        "title": "Chat Memory Button",
+        "description": "You can no longer go into chat memory on the main menu, that's it."
+      },
+      {
+        "title": "And then, tons of fixes:",
+        "description": "Fixed persona images not loading if AI sent message as persona, Fixed rating/rerolls breaking if you deleted an AI message and the next new message is also an AI message, Fixed custom themes error handling and added a way to cancel custom theme generation, Fixed character images only updating on restart, Fixed recursive scanning for lorebooks, Fixed lorebooks on continuation prompts (Continuing messages)."
+      }
+    ]
+  }
+}
