@@ -1,0 +1,33 @@
+{
+  "name": "Full Release!",
+  "version": "1.0",
+  "release_date": "2026-8-11",
+  "status": "stable",
+
+  "summary": "Quality of life, text to speech, and finally: fully released.",
+
+  "highlights": [
+    "Text to Speech {Fish Audio supported only for now.}",
+    "Fixed isssues with corrupted LLM outputs",
+    "Other smaller optimizations."
+  ],
+
+  "sections": {
+    "new_features": [
+      {
+        "title": "Text to Speech",
+        "description": "Every AI message now has a text to speech button. You can press the TTS button, after setting up your provider in the api settings/setting a voice ID for the character, and have it be read out by the voice."
+      }
+    ],
+    "improvements": [
+      {
+        "title": "Corrupted LLM Outputs",
+        "description": "Some LLMs, especially Deepseek models tend to output garbled, corrupted text, known as mojibake. It should happen way less now."
+      },
+      {
+        "title": "Optimizations",
+        "description": "There's been some read-write optimizations, no functional difference, just easier on lighter hardware, less full re-reads of chat history, etc."
+      }
+    ]
+  }
+}
